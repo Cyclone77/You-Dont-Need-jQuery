@@ -10,19 +10,19 @@
 
 <body>
     <ul>
-        <li><a href="#">链接1</a></li>
-        <li><a href="#">链接2</a></li>
-        <li><a href="#">链接3</a></li>
-        <li><a href="#">链接4</a></li>
-        <li><a href="#">链接5</a></li>
+        <li><a class="abtn" href="#">链接1</a></li>
+        <li><a class="abtn" href="#">链接2</a></li>
+        <li><a class="abtn" href="#">链接3</a></li>
+        <li><a class="abtn" href="#">链接4</a></li>
+        <li><a class="abtn" href="#">链接5</a></li>
     </ul>
     <p>
-        <button class="btn">按钮</button>
+        <button class="btn" id="cbtnSubmit">按钮</button>
     </p>
     <script>
-        var li = document.querySelectorAll("li", "button");
+        var li = document.querySelectorAll("li,#cbtnSubmit");
         console.dir(li);
-        var btn = document.getElementsByClassName("btn");
+        var btn = document.getElementsByClassName("abtn");
         console.log(btn);
     </script>
 </body>
