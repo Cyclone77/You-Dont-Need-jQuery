@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器查询</title>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="#">链接1</a></li>
+        <li><a href="#">链接2</a></li>
+        <li><a href="#">链接3</a></li>
+        <li><a href="#">链接4</a></li>
+        <li><a href="#">链接5</a></li>
+    </ul>
+    <p>
+        <button>按钮</button>
+    </p>
+    <script>
+        var li = document.querySelector('button', 'li');
+        console.dir(li);
+    </script>
+    <div id="foo\bar"></div>
+    <div id="foo:bar"></div>
+
+    <script>
+        console.log('#foo\bar') // "#fooar"
+            //document.querySelector('#foo\bar') // 不匹配任何元素
+
+        console.log('#foo\\bar') // "#foo\bar"
+        console.log('#foo\\\\bar') // "#foo\\bar"
+        var foo = document.querySelector('#foo\\\\bar') // 匹配第一个div
+        console.dir(foo);
+
+        document.querySelector('#foo:bar') // 不匹配任何元素
+        document.querySelector('#foo\\:bar') // 匹配第二个div
+    </script>
+</body>
+
+</html>
