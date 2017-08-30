@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟及上下元素</title>
+</head>
+
+<body>
+    <div id="divmain">
+        <p class="panel"></p>
+        <p class="panel" id="pselect"></p>
+        <p class="panel"></p>
+    </div>
+    <script>
+        var el = document.getElementById("pselect"),
+            elsib = [],
+            elsib1 = [];
+        Array.prototype.filter.call(el.parentNode.children, (child) => {
+            if (child !== el) elsib.push(child);
+        })
+        console.dir(elsib);
+        console.log("-----------");
+        Array.from(el.parentNode.children, (child) => {
+            if (child !== el) elsib1.push(child);
+        })
+        console.dir(elsib1);
+        console.log("-----------");
+    </script>
+    <hr>
+    <p class="list1"></p>
+    <p class="list2"></p>
+    <p class="list3"></p>
+    <script>
+        var el = document.querySelector(".list2"),
+            el2 = el.previousElementSibling,
+            el3 = el.nextElementSibling;
+        console.dir(el2);
+        console.dir(el3);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后代查询</title>
+</head>
+
+<body>
+    <div id="divmain">
+        <p class="list"></p>
+        <p class="list"></p>
+        <p class="list"></p>
+    </div>
+    <p class="list"></p>
+    <script>
+        var el = document.getElementById("divmain"),
+            elp = el.querySelectorAll(".list");
+        console.log(elp);
+    </script>
+</body>
+
+</html>
